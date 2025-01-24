@@ -1,86 +1,55 @@
-### Part 1: **Find the values of the functions at $x = 2$**
+# Çözümler
 
-We are given the following functions:
+## 1. \( y'(x) = y \)
+Bu bir **ayrılabilir diferansiyel denklem**dir. Adım adım çözelim:
 
-1. $f(x) = x^2$
-2. $g(x) = \sqrt{x}$
-3. $h(x) = \frac{1}{x}$
-4. $j(x) = \sin(x)$
+### Adım 1: Denklemi yeniden yazalım
+$$ \frac{dy}{dx} = y $$
+Değişkenleri ayırıyoruz:
+$$ \frac{1}{y} \, dy = dx $$
 
-Let’s substitute $x = 2$ into each function and calculate:
+### Adım 2: Her iki tarafı da integral alalım
+$$ \int \frac{1}{y} \, dy = \int 1 \, dx $$
+$$ \ln|y| = x + C $$
+Burada $C$ entegrasyon sabitidir.
 
-- $f(2) = 2^2 = 4$
-- $g(2) = \sqrt{2} \approx 1.414$
-- $h(2) = \frac{1}{2} = 0.5$
-- $j(2) = \sin(2) \approx 0.909$
+### Adım 3: \( y \) için çözüm yapalım
+Logaritmayı kaldırmak için her iki tarafın üstelini alalım:
+$$ |y| = e^{x+C} $$
+$$ y = Ce^x $$
+Burada $C = e^C$ sabiti kapsıyor.
 
-So, the values of the functions at $x = 2$ are:
-
-- $f(2) = 4$
-- $g(2) \approx 1.414$
-- $h(2) = 0.5$
-- $j(2) \approx 0.909$
-
----
-
-### Part 2: **Find the composite functions**
-
-We are given two new functions to work with:
-
-1. $f(x) = 3x - 1$
-2. $g(x) = \sqrt{x}$
-
-We need to evaluate the following composite functions:
-
-- $f(g(x))$
-- $g(f(x))$
-- $f(f(x))$
-- $g(g(x))$
-
-Let’s go through each one step by step:
-
-#### 1. **$f(g(x))$**
-
-This means that we are substituting $g(x)$ into $f(x)$. We already know that:
-
-$$ f(x) = 3x - 1 \quad \text{and} \quad g(x) = \sqrt{x} $$
-
-Now, substitute $g(x) = \sqrt{x}$ into $f(x)$:
-
-$$ f(g(x)) = f(\sqrt{x}) = 3(\sqrt{x}) - 1 = 3\sqrt{x} - 1 $$
-
-So, $f(g(x)) = 3\sqrt{x} - 1$.
+**Sonuç**:
+$$ y(x) = Ce^x $$
 
 ---
 
-#### 2. **$g(f(x))$**
+## 2. \( y'(x) = \frac{1}{2y(x)} \)
+Bu da **ayrılabilir bir diferansiyel denklem**dir. Adım adım çözelim:
 
-This means that we are substituting $f(x)$ into $g(x)$. Again, we know:
+### Adım 1: Denklemi yeniden yazalım
+$$ \frac{dy}{dx} = \frac{1}{2y} $$
+Değişkenleri ayırıyoruz:
+$$ 2y \, dy = dx $$
 
-$$ f(x) = 3x - 1 \quad \text{and} \quad g(x) = \sqrt{x} $$
+### Adım 2: Her iki tarafı da integral alalım
+$$ \int 2y \, dy = \int 1 \, dx $$
+$$ y^2 = x + C $$
+Burada $C$ entegrasyon sabitidir.
 
-Now, substitute $f(x) = 3x - 1$ into $g(x)$:
+### Adım 3: \( y \) için çözüm yapalım
+Her iki tarafın karekökünü alalım:
+$$ y = \pm \sqrt{x + C} $$
 
-$$ g(f(x)) = g(3x - 1) = \sqrt{3x - 1} $$
-
-So, $g(f(x)) = \sqrt{3x - 1}$.
-
----
-
-#### 3. **$f(f(x))$**
-
-This means that we are substituting $f(x)$ into itself. We know:
-
-$$ f(x) = 3x - 1 $$
-
-Now, substitute $f(x) = 3x - 1$ into itself:
-
-$$ f(f(x)) = f(3x - 1) = 3(3x - 1) - 1 = 9x - 3 - 1 = 9x - 4 $$
-
-So, $f(f(x)) = 9x - 4$.
+**Sonuç**:
+$$ y(x) = \pm \sqrt{x + C} $$
 
 ---
 
-#### 4. **$g(g(x))$**
+## Çözüm Özetleri
 
-This means that we are substituting $g(x)$ into it
+1. \( y'(x) = y \) denklemi için:
+   $$ y(x) = Ce^x $$
+
+2. \( y'(x) = \frac{1}{2y(x)} \) denklemi için:
+   $$ y(x) = \pm \sqrt{x + C} $$
