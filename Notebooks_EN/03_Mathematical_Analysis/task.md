@@ -1,55 +1,59 @@
-# Solutions
-
-## 1. $$ y'(x) = y $$
-This is a **separable differential equation**. Let's solve it step by step:
-
-### Step 1: Rewrite the equation
-$$ \frac{dy}{dx} = y $$
-Separate the variables:
-$$ \frac{1}{y} \, dy = dx $$
-
-### Step 2: Integrate both sides
-$$ \int \frac{1}{y} \, dy = \int 1 \, dx $$
-$$ \ln|y| = x + C $$
-Here, $C$ is the constant of integration.
-
-### Step 3: Solve for $y$
-Exponentiate both sides to remove the logarithm:
-$$ |y| = e^{x+C} $$
-$$ y = Ce^x $$
-Here, $C = e^C$ absorbs the constant.
-
-**Solution**:
-$$ y(x) = Ce^x $$
+# Solutions to First-Order Ordinary Differential Equations
 
 ---
 
-## 2. $$ y'(x) = \frac{1}{2y(x)} $$
-This is also a **separable differential equation**. Let's solve it step by step:
+## 1. $y'(x) = y$
 
-### Step 1: Rewrite the equation
-$$ \frac{dy}{dx} = \frac{1}{2y} $$
-Separate the variables:
-$$ 2y \, dy = dx $$
+This is a **separable differential equation**.
 
-### Step 2: Integrate both sides
-$$ \int 2y \, dy = \int 1 \, dx $$
-$$ y^2 = x + C $$
-Here, $C$ is the constant of integration.
+### Steps:
 
-### Step 3: Solve for $y$
-Take the square root of both sides:
-$$ y = \pm \sqrt{x + C} $$
+1. Rewrite the equation:  
+   $$\frac{dy}{dx} = y$$
 
-**Solution**:
-$$ y(x) = \pm \sqrt{x + C} $$
+2. Separate the variables $y$ and $x$:  
+   $$\frac{1}{y} \, dy = dx$$
+
+3. Integrate both sides:  
+   $$\int \frac{1}{y} \, dy = \int 1 \, dx$$
+
+4. Solve the integrals:  
+   $$\ln|y| = x + C$$  
+   where $C$ is the constant of integration.
+
+5. Exponentiate to eliminate the logarithm:  
+   $$|y| = e^{x+C} = e^C \cdot e^x$$
+
+6. Simplify, letting $C_1 = \pm e^C$:  
+   $$y = C_1 e^x$$
+
+**Solution:**  
+$$y(x) = C_1 e^x$$  
+where $C_1$ is an arbitrary constant.
 
 ---
 
-## Summary of Solutions
+## 2. $y'(x) = \frac{1}{2y(x)}$
 
-1. For $$ y'(x) = y $$:
-   $$ y(x) = Ce^x $$
+This is also a **separable differential equation**.
 
-2. For $$ y'(x) = \frac{1}{2y(x)} $$:
-   $$ y(x) = \pm \sqrt{x + C} $$
+### Steps:
+
+1. Rewrite the equation:  
+   $$\frac{dy}{dx} = \frac{1}{2y}$$
+
+2. Separate the variables $y$ and $x$:  
+   $$2y \, dy = dx$$
+
+3. Integrate both sides:  
+   $$\int 2y \, dy = \int 1 \, dx$$
+
+4. Solve the integrals:  
+   $$y^2 = x + C$$
+
+5. Solve for $y$:  
+   $$y = \pm\sqrt{x + C}$$
+
+**Solution:**  
+$$y(x) = \pm\sqrt{x + C}$$  
+where $C$ is an arbitrary constant.
