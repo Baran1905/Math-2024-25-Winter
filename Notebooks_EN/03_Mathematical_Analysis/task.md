@@ -1,50 +1,143 @@
-### Solutions:
+# Solutions to the Problems
 
-1. **$\int 1 \, dx$**  
-   $$\int 1 \, dx = x + C$$
+## 1. \( y'(x) = y \)
 
-2. **$\int (x^2 + 2) \, dx$**  
-   $$\int (x^2 + 2) \, dx = \frac{x^3}{3} + 2x + C$$
+This differential equation is a **separable differential equation**. Let’s solve it step by step:
 
-3. **$\int 2\sin(x) \, dx$**  
-   $$\int 2\sin(x) \, dx = -2\cos(x) + C$$
+---
 
-4. **$\int \frac{3}{x} \, dx$**  
-   $$\int \frac{3}{x} \, dx = 3\ln|x| + C$$
+### Step 1: Rewrite the equation
+The equation can be written as:
+$$
+\frac{dy}{dx} = y
+$$
 
-5. **$\int \frac{1}{x^2} \, dx$**  
-   $$\int \frac{1}{x^2} \, dx = -\frac{1}{x} + C$$
+---
 
-6. **$\int \left( \frac{1}{3}x^4 - 5 \right) \, dx$**  
-   $$\int \left( \frac{1}{3}x^4 - 5 \right) \, dx = \frac{1}{15}x^5 - 5x + C$$
+### Step 2: Separate the variables
+Separate terms involving \( y \) and \( x \):
+$$
+\frac{1}{y} \, dy = dx
+$$
 
-7. **$\int (\sin^2(x) + \cos^2(x)) \, dx$**  
-   Using the identity $\sin^2(x) + \cos^2(x) = 1$,  
-   $$\int (\sin^2(x) + \cos^2(x)) \, dx = x + C$$
+---
 
-8. **$\int (5\sin(x) + 3e^x) \, dx$**  
-   $$\int (5\sin(x) + 3e^x) \, dx = -5\cos(x) + 3e^x + C$$
+### Step 3: Integrate both sides
+Integrate both sides:
+$$
+\int \frac{1}{y} \, dy = \int dx
+$$
 
-9. **$\int \sqrt[3]{x} \, dx$**  
-   Rewrite $\sqrt[3]{x} = x^{1/3}$:  
-   $$\int \sqrt[3]{x} \, dx = \frac{3}{4}x^{4/3} + C$$
+- Left-hand side:
+$$
+\int \frac{1}{y} \, dy = \ln|y|
+$$
 
-10. **$\int \sqrt{10x} \, dx$**  
-    Rewrite $\sqrt{10x} = \sqrt{10} \cdot x^{1/2}$:  
-    $$\int \sqrt{10x} \, dx = \frac{2\sqrt{10}}{3}x^{3/2} + C$$
+- Right-hand side:
+$$
+\int dx = x + C
+$$
 
-11. **$\int \cos\left(\frac{5}{2}x + 3\right) \, dx$**  
-    Use substitution: Let $u = \frac{5}{2}x + 3$, so $du = \frac{5}{2}dx$:  
-    $$\int \cos\left(\frac{5}{2}x + 3\right) \, dx = \frac{2}{5} \sin\left(\frac{5}{2}x + 3\right) + C$$
+This gives:
+$$
+\ln|y| = x + C
+$$
 
-12. **$\int \frac{\cos(\ln(x))}{x} \, dx$**  
-    Use substitution: Let $u = \ln(x)$, so $du = \frac{1}{x}dx$:  
-    $$\int \frac{\cos(\ln(x))}{x} \, dx = \sin(\ln(x)) + C$$
+---
 
-13. **$\int x \ln(x) \, dx$**  
-    Use integration by parts: Let $u = \ln(x)$ and $dv = x \, dx$:  
-    $$\int x \ln(x) \, dx = \frac{x^2}{2} \ln(x) - \frac{x^2}{4} + C$$
+### Step 4: Solve for \( y \)
+Exponentiate both sides to isolate \( y \):
+$$
+|y| = e^{x + C} = e^C e^x
+$$
 
-14. **$\int x e^x \, dx$**  
-    Use integration by parts: Let $u = x$ and $dv = e^x \, dx$:  
-    $$\int x e^x \, dx = (x - 1)e^x + C$$### Solutions:
+Here, we substitute \( e^C \) with \( C_1 \) (a positive constant):
+$$
+|y| = C_1 e^x
+$$
+
+Finally, remove the absolute value:
+$$
+y = Ce^x
+$$
+where \( C \) is any real constant.
+
+---
+
+### Solution:
+$$
+y = Ce^x
+$$
+
+---
+
+## 2. \( y'(x) = \frac{1}{2y(x)} \)
+
+This is also a **separable differential equation**. Let’s solve it step by step:
+
+---
+
+### Step 1: Rewrite the equation
+The equation can be written as:
+$$
+\frac{dy}{dx} = \frac{1}{2y}
+$$
+
+---
+
+### Step 2: Separate the variables
+Separate terms involving \( y \) and \( x \):
+$$
+2y \, dy = dx
+$$
+
+---
+
+### Step 3: Integrate both sides
+Integrate both sides:
+$$
+\int 2y \, dy = \int dx
+$$
+
+- Left-hand side:
+$$
+\int 2y \, dy = y^2
+$$
+
+- Right-hand side:
+$$
+\int dx = x + C
+$$
+
+This gives:
+$$
+y^2 = x + C
+$$
+
+---
+
+### Step 4: Solve for \( y \)
+Take the square root of both sides to isolate \( y \):
+$$
+y = \pm \sqrt{x + C}
+$$
+
+---
+
+### Solution:
+$$
+y = \pm \sqrt{x + C}
+$$
+
+---
+
+## Final Results:
+1. For \( y'(x) = y \):
+$$
+y = Ce^x
+$$
+
+2. For \( y'(x) = \frac{1}{2y(x)} \):
+$$
+y = \pm \sqrt{x + C}
+$$
