@@ -1,55 +1,55 @@
-# Çözümler
+# Solutions
 
-## 1. \( y'(x) = y \)
-Bu bir **ayrılabilir diferansiyel denklem**dir. Adım adım çözelim:
+## 1. $$ y'(x) = y $$
+This is a **separable differential equation**. Let's solve it step by step:
 
-### Adım 1: Denklemi yeniden yazalım
+### Step 1: Rewrite the equation
 $$ \frac{dy}{dx} = y $$
-Değişkenleri ayırıyoruz:
+Separate the variables:
 $$ \frac{1}{y} \, dy = dx $$
 
-### Adım 2: Her iki tarafı da integral alalım
+### Step 2: Integrate both sides
 $$ \int \frac{1}{y} \, dy = \int 1 \, dx $$
 $$ \ln|y| = x + C $$
-Burada $C$ entegrasyon sabitidir.
+Here, $C$ is the constant of integration.
 
-### Adım 3: \( y \) için çözüm yapalım
-Logaritmayı kaldırmak için her iki tarafın üstelini alalım:
+### Step 3: Solve for $y$
+Exponentiate both sides to remove the logarithm:
 $$ |y| = e^{x+C} $$
 $$ y = Ce^x $$
-Burada $C = e^C$ sabiti kapsıyor.
+Here, $C = e^C$ absorbs the constant.
 
-**Sonuç**:
+**Solution**:
 $$ y(x) = Ce^x $$
 
 ---
 
-## 2. \( y'(x) = \frac{1}{2y(x)} \)
-Bu da **ayrılabilir bir diferansiyel denklem**dir. Adım adım çözelim:
+## 2. $$ y'(x) = \frac{1}{2y(x)} $$
+This is also a **separable differential equation**. Let's solve it step by step:
 
-### Adım 1: Denklemi yeniden yazalım
+### Step 1: Rewrite the equation
 $$ \frac{dy}{dx} = \frac{1}{2y} $$
-Değişkenleri ayırıyoruz:
+Separate the variables:
 $$ 2y \, dy = dx $$
 
-### Adım 2: Her iki tarafı da integral alalım
+### Step 2: Integrate both sides
 $$ \int 2y \, dy = \int 1 \, dx $$
 $$ y^2 = x + C $$
-Burada $C$ entegrasyon sabitidir.
+Here, $C$ is the constant of integration.
 
-### Adım 3: \( y \) için çözüm yapalım
-Her iki tarafın karekökünü alalım:
+### Step 3: Solve for $y$
+Take the square root of both sides:
 $$ y = \pm \sqrt{x + C} $$
 
-**Sonuç**:
+**Solution**:
 $$ y(x) = \pm \sqrt{x + C} $$
 
 ---
 
-## Çözüm Özetleri
+## Summary of Solutions
 
-1. \( y'(x) = y \) denklemi için:
+1. For $$ y'(x) = y $$:
    $$ y(x) = Ce^x $$
 
-2. \( y'(x) = \frac{1}{2y(x)} \) denklemi için:
+2. For $$ y'(x) = \frac{1}{2y(x)} $$:
    $$ y(x) = \pm \sqrt{x + C} $$
