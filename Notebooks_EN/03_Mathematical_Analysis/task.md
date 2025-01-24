@@ -1,143 +1,86 @@
-# Solutions to the Problems
+### Part 1: **Find the values of the functions at $x = 2$**
 
-## 1. \( y'(x) = y \)
+We are given the following functions:
 
-This differential equation is a **separable differential equation**. Let’s solve it step by step:
+1. $f(x) = x^2$
+2. $g(x) = \sqrt{x}$
+3. $h(x) = \frac{1}{x}$
+4. $j(x) = \sin(x)$
 
----
+Let’s substitute $x = 2$ into each function and calculate:
 
-### Step 1: Rewrite the equation
-The equation can be written as:
-$$
-\frac{dy}{dx} = y
-$$
+- $f(2) = 2^2 = 4$
+- $g(2) = \sqrt{2} \approx 1.414$
+- $h(2) = \frac{1}{2} = 0.5$
+- $j(2) = \sin(2) \approx 0.909$
 
----
+So, the values of the functions at $x = 2$ are:
 
-### Step 2: Separate the variables
-Separate terms involving \( y \) and \( x \):
-$$
-\frac{1}{y} \, dy = dx
-$$
-
----
-
-### Step 3: Integrate both sides
-Integrate both sides:
-$$
-\int \frac{1}{y} \, dy = \int dx
-$$
-
-- Left-hand side:
-$$
-\int \frac{1}{y} \, dy = \ln|y|
-$$
-
-- Right-hand side:
-$$
-\int dx = x + C
-$$
-
-This gives:
-$$
-\ln|y| = x + C
-$$
+- $f(2) = 4$
+- $g(2) \approx 1.414$
+- $h(2) = 0.5$
+- $j(2) \approx 0.909$
 
 ---
 
-### Step 4: Solve for \( y \)
-Exponentiate both sides to isolate \( y \):
-$$
-|y| = e^{x + C} = e^C e^x
-$$
+### Part 2: **Find the composite functions**
 
-Here, we substitute \( e^C \) with \( C_1 \) (a positive constant):
-$$
-|y| = C_1 e^x
-$$
+We are given two new functions to work with:
 
-Finally, remove the absolute value:
-$$
-y = Ce^x
-$$
-where \( C \) is any real constant.
+1. $f(x) = 3x - 1$
+2. $g(x) = \sqrt{x}$
 
----
+We need to evaluate the following composite functions:
 
-### Solution:
-$$
-y = Ce^x
-$$
+- $f(g(x))$
+- $g(f(x))$
+- $f(f(x))$
+- $g(g(x))$
 
----
+Let’s go through each one step by step:
 
-## 2. \( y'(x) = \frac{1}{2y(x)} \)
+#### 1. **$f(g(x))$**
 
-This is also a **separable differential equation**. Let’s solve it step by step:
+This means that we are substituting $g(x)$ into $f(x)$. We already know that:
+
+$$ f(x) = 3x - 1 \quad \text{and} \quad g(x) = \sqrt{x} $$
+
+Now, substitute $g(x) = \sqrt{x}$ into $f(x)$:
+
+$$ f(g(x)) = f(\sqrt{x}) = 3(\sqrt{x}) - 1 = 3\sqrt{x} - 1 $$
+
+So, $f(g(x)) = 3\sqrt{x} - 1$.
 
 ---
 
-### Step 1: Rewrite the equation
-The equation can be written as:
-$$
-\frac{dy}{dx} = \frac{1}{2y}
-$$
+#### 2. **$g(f(x))$**
+
+This means that we are substituting $f(x)$ into $g(x)$. Again, we know:
+
+$$ f(x) = 3x - 1 \quad \text{and} \quad g(x) = \sqrt{x} $$
+
+Now, substitute $f(x) = 3x - 1$ into $g(x)$:
+
+$$ g(f(x)) = g(3x - 1) = \sqrt{3x - 1} $$
+
+So, $g(f(x)) = \sqrt{3x - 1}$.
 
 ---
 
-### Step 2: Separate the variables
-Separate terms involving \( y \) and \( x \):
-$$
-2y \, dy = dx
-$$
+#### 3. **$f(f(x))$**
+
+This means that we are substituting $f(x)$ into itself. We know:
+
+$$ f(x) = 3x - 1 $$
+
+Now, substitute $f(x) = 3x - 1$ into itself:
+
+$$ f(f(x)) = f(3x - 1) = 3(3x - 1) - 1 = 9x - 3 - 1 = 9x - 4 $$
+
+So, $f(f(x)) = 9x - 4$.
 
 ---
 
-### Step 3: Integrate both sides
-Integrate both sides:
-$$
-\int 2y \, dy = \int dx
-$$
+#### 4. **$g(g(x))$**
 
-- Left-hand side:
-$$
-\int 2y \, dy = y^2
-$$
-
-- Right-hand side:
-$$
-\int dx = x + C
-$$
-
-This gives:
-$$
-y^2 = x + C
-$$
-
----
-
-### Step 4: Solve for \( y \)
-Take the square root of both sides to isolate \( y \):
-$$
-y = \pm \sqrt{x + C}
-$$
-
----
-
-### Solution:
-$$
-y = \pm \sqrt{x + C}
-$$
-
----
-
-## Final Results:
-1. For \( y'(x) = y \):
-$$
-y = Ce^x
-$$
-
-2. For \( y'(x) = \frac{1}{2y(x)} \):
-$$
-y = \pm \sqrt{x + C}
-$$
+This means that we are substituting $g(x)$ into it
